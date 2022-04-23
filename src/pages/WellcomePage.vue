@@ -1,18 +1,37 @@
 <template>
   <div class="main-container">
     <h1>{{ $t("main.title") }}</h1>
-    <button class="cybr-btn">
+    <button class="cybr-btn" @click="goToRoute('/music')">
       {{ $t("main.initBtn") }}
       <span aria-hidden>_</span>
       <span aria-hidden class="cybr-btn__glitch">{{ $t("main.initBtn") }}</span>
       <span aria-hidden class="cybr-btn__tag">G.D.A.</span>
     </button>
+    <div>
+      <LangSwitcher />
+    </div>
   </div>
 </template>
 
 <script>
+import LangSwitcher from "../components/LangSwitcher.vue";
+
 export default {
   name: "WellcomePage",
+  data() {
+    return {
+    };
+  },
+  components: {
+    LangSwitcher,
+  },
+  methods: {
+    goToRoute(route) {
+      this.$router.push(route);
+    },
+  },
+  watch: {
+  },
 };
 </script>
 

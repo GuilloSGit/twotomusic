@@ -26,9 +26,9 @@ export default defineComponent({
       }
     },
   },
-  created() {
-    console.log(this.locales);
-  },
+  // created() {
+  //   console.log(this.locales);
+  // },
   data() {
     return {
       locales: process.env.VUE_APP_I18N_SUPPORTED_LOCALE.split(','),
@@ -46,6 +46,7 @@ export default defineComponent({
   .textSwitcher {
     font-size: 0.8rem;
     margin-bottom: 1rem;
+    line-height: 0.5;
   }
   .listOfLangs {
     display: flex;
@@ -55,6 +56,7 @@ export default defineComponent({
     list-style: none;
     margin: 0;
     padding: 0;
+    line-height: 0.5;
   }
   .langItem {
     font-size: 1.5rem;

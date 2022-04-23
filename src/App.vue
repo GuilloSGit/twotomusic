@@ -1,16 +1,14 @@
 <template>
   <div>
-    <WellcomePage/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import WellcomePage from './pages/WellcomePage.vue';
 
 export default {
   name: 'App',
   components: {
-    WellcomePage
   }
 }
 </script>
